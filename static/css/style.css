@@ -1,0 +1,135 @@
+/* Header and content container. */
+#main {
+    margin: 0 auto;
+    margin-top: 10vh;
+    min-width: 600px;
+    max-width: 800px;
+    color: #625D5D;
+    position: inline-block;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+/* Header. */
+header {
+    text-align: center;
+    background: rgba(1,152,225,1);
+    padding: 1em;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-user-select: none;
+}
+#header-link {
+    color: #603311;
+    text-decoration: none;
+}
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
+}
+
+
+/* Content. */
+ul {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Signup button. */
+#content {
+    text-align: center;
+    margin-top: 1em;
+}
+#signed-in {
+    text-align: center;
+    width: 100%;
+    font-size: .9em;
+    margin: 0;
+    font-style: italic;
+    margin-top: 1%;
+}
+#customBtn {
+    margin-top: 5%;
+    display: inline-block;
+    background: #dd4b39;
+    color: white;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+#customBtn:hover {
+    background: #e74b37;
+    cursor: pointer;
+}
+span.icon {
+    background: url('/static/images/gplus_btn_red_32_x1.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    padding-right: 5px;
+    border-right: #bb3f30 1px solid;
+}
+span.buttonText {
+    vertical-align: middle;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+span#littleBtn {
+    display: none;
+}
+span#bigBtn {
+    display: inline-block;
+}
+
+/* Footer. */
+footer {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    padding-bottom: 5px;
+    color: gray;
+}
+footer a:hover, footer a:link, footer a:visited, footer a:active {
+    color: gray;
+}
+
+/* Responsive design. */
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 2em;
+    }
+    #main {
+        min-width: 0;
+        margin: 0;
+    }
+    body { 
+        margin: 0;
+        width: 100%;
+    }
+    header {
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        border-radius: 0px;
+        padding: .1em;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0 3%;
+    }
+    li {
+        margin-top: .5em;
+    }
+    span#bigBtn {
+        display: none;
+    }
+    span#littleBtn {
+        display: inline-block;
+    }
+}

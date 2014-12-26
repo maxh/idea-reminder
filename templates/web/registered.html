@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if user_status == 'registered' %}
+    <p>Hi there, {{ user_email }}. You can:</p>
+  {% elif user_status == 'already_registered' %}
+    <p>Looks like you're already signed up, {{ user_email }}. You can:</p>
+  {% endif %}
+  <ul>
+    <li><a href="{{ responses_link }}">View your responses spreadsheet</a></li>
+    <li><a href="{{ unsubscribe_link }}">Unsubscribe</a></li>
+    <li><a href="{{ sign_out_link }}">Sign out</a></li>
+  </ul>
+{% endblock %}

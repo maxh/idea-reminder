@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <ul>
+    <li>Every day you'll receive an email from us.</li>
+    <li>Reply with something you're grateful for.</li>
+    <li>We'll store your replies in a Google Spreadsheet.</li>
+  </ul>
+  <a href="{{ sign_up_link }}">
+    <div id="customBtn" class="customGPlusSignIn">
+      <span class="icon"></span><span id="littleBtn" class="buttonText">
+        Sign up with Google</span><span id="bigBtn" class="buttonText">
+        Sign up with your Google Account</span>
+    </div>
+  </a>
+  <p id="signed-in">
+    Already subscribed? <a href="{{ sign_in_link }}">Sign in</a>.
+  </p>
+{% endblock %}
