@@ -1,28 +1,25 @@
-{% set subject = 'Welcome to Gratitude Reminder' %}
+{% set subject = 'Welcome to Idea Reminder' %}
 {% if format == 'html' %}
-Namaste,
+Hi there,
 <p>The deal is:</p>
 <ol>
 <li>Every day you'll receive an email from us.</li>
-<li>Reply with something you're grateful for.</li>
-<li>Visit your <a href="{{ responses_link }}">Gratitude Reminder Responses Google Spreadsheet<a> to see your past responses.</li>
+<li>Reply with a new idea for an project (artistic, business-y, social, whatever).</li>
+<li>Visit your <a href="{{ responses_link }}">Idea Reminder Responses Google Spreadsheet<a> to see your past responses.</li>
 </ol>
 <p>You can <a href="{{ unsubscribe_link }}">unsubscribe</a> at anytime.</p>
-<p>The Abbot</p>
 {% else %}
-Namaste,
+Hi there,
 
 The deal is:
 
 1. Every day you'll receive an email from us.
-2. Reply with something you're grateful for.
-3. Visit your Gratitude Reminder Responses Google Spreadsheet<a> to see your past responses:
+2. Reply with a new idea for an project (artistic, business-y, social, whatever).
+3. Visit your Idea Reminder Responses Google Spreadsheet to see your past responses:
 
 {{ responses_link }}
 
 You can unsubscribe at anytime:
 
 {{ unsubscribe_link }}
-
-The Abbot
 {% endif %}
