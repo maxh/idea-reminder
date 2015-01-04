@@ -28,6 +28,10 @@ JINJA_ENVIRONMENT = jinja2.Environment(
         os.path.dirname(__file__) + '/templates/web/'),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+JINJA_ENVIRONMENT.globals = {
+    'app_name': settings.APP_NAME,
+    'github_url': settings.GITHUB_URL
+}
 
 
 class MainPage(webapp2.RequestHandler):

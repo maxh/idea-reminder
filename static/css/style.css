@@ -13,7 +13,7 @@
 /* Header. */
 header {
     text-align: center;
-    background: rgba(1,152,225,1);
+    background: #96A2F4;
     padding: 1em;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -22,7 +22,7 @@ header {
     -webkit-user-select: none;
 }
 #header-link {
-    color: #603311;
+    color: #000399;
     text-decoration: none;
 }
 h1 {

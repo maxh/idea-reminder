@@ -7,7 +7,8 @@ from datetime import datetime
 import re
 import xml.etree.ElementTree as ET
 
-import lib # All third-party libraries are in this module.
+#import lib # All third-party libraries are in this module.
+import lib
 import gdata.spreadsheets.client
 import gdata.spreadsheet.service
 import gdata.client
@@ -18,8 +19,6 @@ from oauth2client.appengine import AppAssertionCredentials
 
 import settings
 from secrets import keys
-
-TEMPLATE_ID = '1KW7wgVbojOlDdvbs44trJxz9CCKKgL8P2SPd5l016SU'
 
 
 def create_authorized_http(scope):
@@ -77,8 +76,10 @@ def create_responses_spreadsheet(user_email):
         start = datetime.now()
         service = create_drive_service()
         logging.info(service)
-        body = {'title': 'Gratitude Reminder Responses'}
-        copy = service.files().copy(fileId=TEMPLATE_ID, body=body).execute()
+        body = {'title': 'Idea Reminder Responses'}
+        copy = service.files().copy(
+            fileId=settings.TEMPLATE_ID,
+            body=body).execute()
         copy_id = copy['id']
         give_user_ownership(service, copy['id'], user_email)
         logging.info('Time spent in create_responses_spreadsheet')

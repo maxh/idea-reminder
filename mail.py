@@ -22,13 +22,15 @@ import models
 import settings
 
 
-SENDER = 'Gratitude Reminder <postman@gratitudereminder.appspotmail.com>'
-
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(
         os.path.dirname(__file__) + '/templates/emails/'),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+JINJA_ENVIRONMENT.globals = {
+    'app_name': settings.APP_NAME,
+    'github_url': settings.GITHUB_URL
+}
 
 
 class SendReminderEmails(webapp2.RequestHandler):
@@ -93,11 +95,11 @@ def send_email_from_template(user_email, file_id, template):
     send_email(user_email, template.module.subject, body, html_body)
 
 
-def send_email(address, subject, body, html_body, reply_to=SENDER):
+def send_email(address, subject, body, html_body):
     message = mail.EmailMessage()
     message.to = address
-    message.sender = SENDER
-    message.reply_to = reply_to
+    message.sender = settings.EMAIL_SENDER
+    message.reply_to = settings.EMAIL_SENDER
     message.subject = subject
     message.body = body
     message.html = html_body

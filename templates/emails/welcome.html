@@ -1,11 +1,11 @@
-{% set subject = 'Welcome to Idea Reminder' %}
+{% set subject = 'Welcome to ' + app_name %}
 {% if format == 'html' %}
 Hi there,
 <p>The deal is:</p>
 <ol>
 <li>Every day you'll receive an email from us.</li>
-<li>Reply with a new idea for an project (artistic, business-y, social, whatever).</li>
-<li>Visit your <a href="{{ responses_link }}">Idea Reminder Responses Google Spreadsheet<a> to see your past responses.</li>
+<li>Reply with a new idea (artistic, business-y, social, whatever).</li>
+<li>Visit your <a href="{{ responses_link }}">{{ app_name }} Responses Google Spreadsheet<a> to see your past responses.</li>
 </ol>
 <p>You can <a href="{{ unsubscribe_link }}">unsubscribe</a> at anytime.</p>
 {% else %}
@@ -15,7 +15,7 @@ The deal is:
 
 1. Every day you'll receive an email from us.
 2. Reply with a new idea for an project (artistic, business-y, social, whatever).
-3. Visit your Idea Reminder Responses Google Spreadsheet to see your past responses:
+3. Visit your private {{ app_name }} Responses Google Spreadsheet to see your past responses:
 
 {{ responses_link }}
 
