@@ -1,7 +1,7 @@
-Gratitude Reminder
-==================
+Idea Reminder
+=============
 
-[gratitudereminder.org](http://www.gratitudereminder.org/)
+[ideareminder.org](http://www.ideareminder.org/)
 
 ### Set up
 
